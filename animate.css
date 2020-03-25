@@ -1,0 +1,66 @@
+body {
+    background-color: #333;
+    color: white;
+    height: auto;
+    width: auto;
+}
+#parentcontainer {
+    background-color: cornflowerblue;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.childcontainer {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+  
+}
+.childcontainer:hover {
+    transform: rotateX(360deg);
+    cursor: pointer;
+    transition: 1S;
+}
+.ball {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: white;
+    animation-name: myanimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+}   
+
+@keyframes myanimation {
+    0% {
+        background-color: white;
+        left: 0px;top: 0px;
+        border-radius: 0% 0% 0% 0%;
+    }
+    25%{
+        background-color: yellow;
+        left: 550px;top: 0px;
+        border-radius: 50% 0% 0% 0%;
+    }
+    50% {
+        background-color: red;
+        left: 550px;top: 50px;
+        border-radius: 50% 50% 0% 0%;
+    }
+    75%{
+        background-color: green;
+        left: 0px;top: 50px;
+        border-radius: 50% 50% 50% 0%;
+    }
+    100% {
+        background-color: white;
+        left: 0px;top: 0px;
+        border-radius: 50% 50% 50% 50%;
+    }
+}
